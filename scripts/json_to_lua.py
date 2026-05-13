@@ -16,7 +16,7 @@ from datetime import datetime
 
 
 def _lua_key(k):
-    if re.match(r'^[A-Za-z_][A-Za-z0-9_]*, k):
+    if re.match(r'^[A-Za-z_][A-Za-z0-9_]*$', k):
         return k
     return '["' + k.replace('\\', '\\\\').replace('"', '\\"') + '"]'
 
